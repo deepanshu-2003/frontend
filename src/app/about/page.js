@@ -9,33 +9,26 @@ import AboutSection from "../../components/AboutSection";
 export default function About() {
   const teamMembers = [
     {
-      id: 1,
-      name: 'Krishna Singhaniya',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
-      bio: 'With over 8 years of industry experience, Krishna leads our team with vision and passion.'
-    },
-    {
-      id: 2,
-      name: 'Deepanshu Dixit',
-      role: 'Co-Founder & Tech. Geek',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80',
-      bio: 'Passionate coding geek who thrives on building smart, scalable tech solutions with creativity and vision.'
-    },
-    {
-      id: 3,
-      name: 'Pran Chaudhary',
-      role: 'Marketing Head',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
-      bio: 'As Marketing Head, Pran drives innovative strategies that fuel brand growth and deliver impactful, measurable results..'
-    },
-    {
-      id: 4,
-      name: 'Tanishq Sharma',
-      role: 'Marketing Strategist',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80',
-      bio: "Tanishq develops innovative marketing strategies that deliver measurable results for our clients"
-    }
+          id: 1,
+          name: 'Pran Chaudhary',
+          role: 'Founder & CEO',
+          image: '/images/profile.webp',
+          bio: 'With over 6 years of industry experience, Pran leads our team with vision and passion.'
+        },
+        {
+          id: 2,
+          name: 'Deepanshu Dixit',
+          role: 'Co-Founder & Tech. Geek',
+          image: '/images/profile.webp',
+          bio: 'Passionate coding geek who thrives on building smart, scalable tech solutions with creativity and vision.'
+        },
+        {
+          id: 3,
+          name: 'Krishna Singhaniya',
+          role: 'Co-Foundner & Digital Marketing Expert',
+          image: '/images/profile.webp',
+          bio: 'As Digital Marketing Expert, Krishna drives innovative strategies that fuel brand growth and deliver impactful, measurable results..'
+        },
   ];
 
   return (
