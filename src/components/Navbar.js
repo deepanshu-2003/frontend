@@ -43,6 +43,9 @@ export default function Navbar({ isScrolled }) {
                   style={{width: 'auto', height: 'auto'}}
                 />
               </div>
+              <div className={styles.logoText}>
+                <span className={styles.logoTextYellow}>BEE</span>HIVE AMORE
+              </div>
             </div>
         </Link>
 
@@ -75,7 +78,7 @@ export default function Navbar({ isScrolled }) {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <motion.div 
-          className={styles.mobileMenu}
+          className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

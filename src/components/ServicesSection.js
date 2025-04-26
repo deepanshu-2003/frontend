@@ -10,7 +10,7 @@ export default function ServicesSection() {
     {
       id: 1,
       title: 'Digital Marketing',
-      description: 'Boost your online presence with our specialized digital marketing strategies and campaigns, including SEO, content creation, and brand strategy.',
+      description: 'Boost your online presence.',
       icon: <FaChartLine />,
       path: '/services',
       featured: true
@@ -18,7 +18,7 @@ export default function ServicesSection() {
     {
       id: 2,
       title: 'Advanced Coding',
-      description: 'Custom software solutions and advanced programming services for complex business needs, including web development, app development, and AI/ML.',
+      description: 'Custom software solutions.',
       icon: <FaLaptopCode />,
       path: '/services',
       featured: true
@@ -26,28 +26,28 @@ export default function ServicesSection() {
     {
       id: 3,
       title: 'Web Development',
-      description: 'Create stunning, responsive websites that provide exceptional user experience.',
+      description: 'Create stunning websites.',
       icon: <FaCode />,
       path: '/services'
     },
     {
       id: 4,
       title: 'Brand Strategy',
-      description: 'Develop a compelling brand identity that resonates with your target audience.',
+      description: 'Develop a compelling brand.',
       icon: <FaLightbulb />,
       path: '/services'
     },
     {
       id: 5,
       title: 'SEO Optimization',
-      description: 'Improve your search engine rankings and drive organic traffic to your website.',
+      description: 'Improve search engine rankings.',
       icon: <FaSearch />,
       path: '/services'
     },
     {
       id: 6,
       title: 'Content Creation',
-      description: 'Engage your audience with compelling content that tells your brand story.',
+      description: 'Engage your audience.',
       icon: <FaPen />,
       path: '/services'
     }

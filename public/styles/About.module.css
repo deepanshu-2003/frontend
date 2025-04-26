@@ -46,6 +46,8 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   gap: 3rem;
+  background-color: var(--color-secondary); /* Apply dark purple background */
+  color: var(--color-text-light); /* Set text color to light */
 }
 
 .storyContent {
@@ -54,7 +56,7 @@
 
 .storyContent p {
   margin-bottom: 1.5rem;
-  color: var(--color-gray);
+  color: var(--color-light-gray); /* Adjust text color for contrast */
   font-size: var(--font-size-md);
   line-height: 1.7;
 }
@@ -85,7 +87,8 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   gap: 3rem;
-  background-color: var(--color-light);
+  background-color: var(--color-secondary-dark); /* Apply a slightly darker purple background */
+  color: var(--color-text-light); /* Set text color to light */
 }
 
 .missionContent {
@@ -94,7 +97,7 @@
 
 .missionContent p {
   margin-bottom: 1.5rem;
-  color: var(--color-gray);
+  color: var(--color-light-gray); /* Adjust text color for contrast */
   font-size: var(--font-size-md);
   line-height: 1.7;
 }
@@ -121,6 +124,8 @@
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-color: var(--color-secondary); /* Apply dark purple background */
+  color: var(--color-text-light); /* Set text color to light */
 }
 
 .valuesGrid {
@@ -131,7 +136,7 @@
 }
 
 .valueCard {
-  background-color: var(--color-white);
+  background-color: var(--color-secondary-light); /* Adjust background for contrast */
   padding: 2rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
@@ -144,13 +149,13 @@
 }
 
 .valueCard h3 {
-  color: var(--color-primary);
+  color: var(--color-primary-light); /* Adjust text color for contrast */
   margin-bottom: 1rem;
   font-size: var(--font-size-xl);
 }
 
 .valueCard p {
-  color: var(--color-gray);
+  color: var(--color-light-gray); /* Adjust text color for contrast */
   margin-bottom: 0;
 }
 
@@ -160,7 +165,8 @@
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: var(--color-light);
+  background-color: var(--color-secondary); /* Apply dark purple background */
+  color: var(--color-text-light); /* Set text color to light */
 }
 
 .teamGrid {
@@ -266,4 +272,27 @@
   .heroContent p {
     font-size: var(--font-size-base);
   }
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row; /* Explicitly set flex direction to row */
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.aboutImageContainer {
+  flex: 1; /* Ensure it takes up equal space */
+  position: relative;
+  max-width: 500px;
+  width: 50%; /* Set width to 50% */
+}
+
+.aboutText {
+  flex: 1; /* Ensure it takes up equal space */
+  max-width: 600px;
+  width: 50%; /* Set width to 50% */
 }

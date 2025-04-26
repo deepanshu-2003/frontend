@@ -55,33 +55,6 @@ export default function HeroSection() {
       
       <div className={styles.heroContent}>
         <motion.div
-          className={styles.heroText}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1 variants={itemVariants}>
-            <span className={styles.heroTitleTop}>Innovative</span>
-            <span className={styles.heroTitleMain}>Digital Solutions</span>
-            <span className={styles.heroTitleBottom}>That Create A Buzz</span>
-          </motion.h1>
-          
-          <motion.p variants={itemVariants}>
-            At <span className={styles.accentText}>Beehive Amore</span>, we help businesses transform their digital presence with innovative strategies and 
-            creative solutions that drive growth and engagement in today's competitive market.
-          </motion.p>
-          
-          <motion.div className={styles.heroCta} variants={itemVariants}>
-            <Link href="/contact" className={`${styles.primaryButton} ${styles.pulseButton}`}>
-              Get Started
-            </Link>
-            <Link href="/services" className={styles.secondaryButton}>
-              Learn More
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
           className={styles.heroImageContainer}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -100,15 +73,38 @@ export default function HeroSection() {
           >
             <div className={styles.heroImage} style={{ position: 'relative', height: '500px', width: '100%' }}>
               <Image
-                src="https://images.unsplash.com/photo-1675119717007-ad04bd2a9d10?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/hero-image.png"
                 alt="Digital Business Solutions"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'cover' }}
                 priority
               />
             </div>
             <div className={styles.imageDecoration}></div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className={styles.heroText}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1 variants={itemVariants}>
+            Transforming Brands in the Digital Age
+          </motion.h1>
+          
+          <motion.p variants={itemVariants}>
+            With a blend of creativity and innovation, we craft bespoke solutions that resonate with your target audience.
+          </motion.p>
+          
+          <motion.div className={styles.heroCta} variants={itemVariants}>
+            <Link href="/contact" className={`${styles.primaryButton} ${styles.pulseButton}`}>
+              Get Started
+            </Link>
+            <Link href="/services" className={styles.secondaryButton}>
+              Portfolios
+            </Link>
           </motion.div>
         </motion.div>
       </div>
@@ -121,12 +117,7 @@ export default function HeroSection() {
         animate={{ opacity: 0.7 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <Image
-          src="/images/dots-pattern.svg"
-          alt="Decorative Pattern"
-          width={300}
-          height={300}
-        />
+        {/* Removed pattern image as it's part of the new hero image */}
       </motion.div>
     </section>
   );

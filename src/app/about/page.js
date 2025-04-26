@@ -12,21 +12,21 @@ export default function About() {
           id: 1,
           name: 'Pran Chaudhary',
           role: 'Founder & CEO',
-          image: '/images/profile.webp',
+          image: '/images/profile-image.jpg',
           bio: 'With over 6 years of industry experience, Pran leads our team with vision and passion.'
         },
         {
           id: 2,
           name: 'Deepanshu Dixit',
           role: 'Co-Founder & Tech. Geek',
-          image: '/images/profile.webp',
+          image: '/images/profile-image.jpg',
           bio: 'Passionate coding geek who thrives on building smart, scalable tech solutions with creativity and vision.'
         },
         {
           id: 3,
           name: 'Krishna Singhaniya',
           role: 'Co-Foundner & Digital Marketing Expert',
-          image: '/images/profile.webp',
+          image: '/images/profile-image.jpg',
           bio: 'As Digital Marketing Expert, Krishna drives innovative strategies that fuel brand growth and deliver impactful, measurable results..'
         },
   ];

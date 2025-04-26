@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import * as motion from "motion/react-client"
-import styles from '/public/styles/Home.module.css';
+import styles from '/public/styles/About.module.css'; // Changed import to About.module.css
 import SectionHeading from './SectionHeading';
 
 export default function AboutSection() {
@@ -29,14 +29,7 @@ export default function AboutSection() {
               style={{ objectFit: 'cover' }}
             />
           </div>
-          <div className={styles.aboutPattern}>
-            <Image
-              src="/images/dots-pattern.svg"
-              alt="Decorative Pattern"
-              width={150}
-              height={150}
-            />
-          </div>
+          
         </motion.div>
 
         <motion.div
