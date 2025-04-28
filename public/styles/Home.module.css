@@ -1884,21 +1884,33 @@
 }
 
 .companyLogosContent {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
+  overflow: hidden;
 }
 
 .logosGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
   gap: 2rem;
   margin-top: 3rem;
   align-items: center;
-  justify-items: center;
+  animation: scrollLogos 30s linear infinite;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .logoWrapper {
+  flex: 0 0 200px;
   background-color: var(--color-secondary-light);
   padding: 1.5rem;
   border-radius: var(--border-radius-md);
@@ -1906,8 +1918,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 200px;
+  width: 200px;
   aspect-ratio: 16/9;
 }
 
@@ -1938,4 +1949,9 @@
   .logoWrapper {
     padding: 1rem;
   }
+}
+
+/* Add this to pause animation on hover */
+.logosGrid:hover {
+  animation-play-state: paused;
 }

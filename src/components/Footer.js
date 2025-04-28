@@ -46,7 +46,7 @@ export default function Footer() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/services">Services</Link>
+                <Link href="/courses">Courses</Link>
               </li>
               <li>
                 <Link href="/about">About Us</Link>
@@ -58,19 +58,19 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerColumn}>
-            <h3 className={styles.footerHeading}>Services</h3>
+            <h3 className={styles.footerHeading}>Courses</h3>
             <ul className={styles.footerLinks}>
               <li>
-                <Link href="/services">Digital Marketing</Link>
+                <Link href="/courses">Digital Marketing</Link>
               </li>
               <li>
-                <Link href="/services">Web Development</Link>
+                <Link href="/courses">Web Development</Link>
               </li>
               <li>
-                <Link href="/services">Advance Coding</Link>
+                <Link href="/courses">Advance Coding</Link>
               </li>
               <li>
-                <Link href="/services">Brand Strategy</Link>
+                <Link href="/courses">SEO Optimization</Link>
               </li>
             </ul>
           </div>
