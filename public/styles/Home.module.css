@@ -28,11 +28,15 @@
   flex: 1;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.certificationsSection {
+  padding: 6rem 0;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.certificationsSection .headingTitle {
+  color: var(--color-primary); /* Changed heading color to match image */
 }
 
 /* Navbar Styles */
@@ -42,14 +46,14 @@
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding: 1.5rem 0;
+  padding:0; /* Further reduced padding */
   z-index: var(--z-index-fixed);
   transition: var(--transition-base);
 }
 
 .navbar.scrolled {
   background-color: var(--color-secondary);
-  padding: 1rem 0;
+  padding: 0; /* Further reduced padding */
   box-shadow: var(--shadow-md);
 }
 
@@ -228,6 +232,7 @@
   position: relative;
   z-index: 1;
   gap: 3rem;
+  text-align: center;
 }
 
 .heroText {
@@ -370,6 +375,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  height: auto;
+  min-height: 200px;
 }
 
 .heroImageWrapper {
@@ -390,10 +397,6 @@
 .imageDecoration {
   display: none; /* Remove image decoration as it's not in the new design */
 }
-
-
-
-
 
 .secondaryButton:hover {
   background-color: var(--color-secondary-dark);
@@ -430,21 +433,36 @@
 
 .statItem {
   text-align: center;
+  padding: 1rem;
+  margin: 0.25rem;
+  min-width: 140px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.statNumber {
-  display: block;
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+.statItem:hover {
+  transform: translateY(-3px);
 }
 
-.statText {
-  font-size: var(--font-size-md);
-  color: var(--color-gray);
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.statLabel {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  font-weight: 500;
+}
 
 .heroPattern {
   display: none; /* Remove pattern as it's part of the new image */
@@ -558,52 +576,66 @@
   color: var(--color-text-light); /* Set text color to light */
 }
 
-.servicesGrid {
+.coursesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Make blocks a bit smaller */
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
   max-width: 1200px;
   margin: 3rem auto 2rem;
   padding: 0 1.5rem;
 }
 
-.serviceCard {
-  background-color: var(--color-secondary-light); /* Set background to a slightly lighter dark purple */
+.courseCard {
+  background-color: var(--color-secondary-light);
   border-radius: var(--border-radius-lg);
-  padding: 1.5rem; /* Reduce padding to make the block smaller */
+  padding: 1rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--color-primary); /* Add outline to all service cards */
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  text-decoration: none;
 }
 
-.serviceCard:hover {
-  transform: translateY(-10px);
+.courseCard:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow-md);
 }
 
-.serviceIcon {
-  font-size: 2.5rem;
+.courseIcon {
+  font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 1.5rem;
-  background-color: var(--color-secondary); /* Set icon background to dark purple */
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.serviceTitle {
-  font-size: var(--font-size-xl);
+.courseIcon:hover {
+  transform: scale(1.1);
+}
+
+.courseIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.courseTitle {
+  font-size: 1rem;
+  color: var(--color-primary-light);
+  margin: 0;
+}
+
+.courseDescription {
+  color: var(--color-light-gray);
   margin-bottom: 1rem;
-  color: var(--color-primary-light); /* Adjust title color for contrast */
-}
-
-.serviceDescription {
-  color: var(--color-light-gray); /* Adjust description color for contrast */
-  margin-bottom: 1rem; /* Reduce bottom margin */
   flex-grow: 1;
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .serviceLink {
@@ -683,12 +715,12 @@
   color: var(--color-white);
 }
 
-.servicesCtaContainer {
+.coursesCtaContainer {
   text-align: center;
   margin-top: 2rem;
 }
 
-.servicesCta {
+.coursesCta {
   display: inline-block;
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -698,7 +730,7 @@
   transition: var(--transition-base);
 }
 
-.servicesCta:hover {
+.coursesCta:hover {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
 }
@@ -826,7 +858,7 @@
 
 .testimonialContentSmall {
   font-size: var(--font-size-sm);
-  color: var(--color-light-gray); /* Adjust text color for contrast */
+  color: var(--color-light-gray); /* Adjust text color for dark background */
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -856,7 +888,7 @@
 
 .authorInfoSmall p {
   font-size: var(--font-size-xs);
-  color: var(--color-light-gray); /* Adjust text color for contrast */
+  color: var(--color-light-gray); /* Adjust text color for dark background */
   margin-bottom: 0;
 }
 
@@ -1209,6 +1241,7 @@
   .heroContent {
     flex-direction: column;
   }
+ 
 
   .heroText {
     max-width: 100%;
@@ -1253,6 +1286,26 @@
   .navbarContainer {
     padding: 0 1rem;
   }
+
+  .statsNumbers {
+    justify-content: center;
+  }
+
+  .statItem {
+    min-width: 150px; /* Adjust min-width for smaller screens */
+    padding: 1rem; /* Reduce padding */
+    margin: 0.5rem; /* Adjust margin */
+  }
+
+  .statValue {
+    font-size: 3rem; /* Reduce font size */
+  }
+
+  .statLabel {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+
+ 
 
   .desktopMenu {
     display: none;
@@ -1310,7 +1363,7 @@
   }
 
 
-  .servicesGrid {
+  .coursesGrid {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Further adjust minmax to make cards smaller */
   }
 
@@ -1358,6 +1411,10 @@
   .headingTitle {
     font-size: var(--font-size-2xl);
   }
+  .heroImage{
+    height: auto;
+  }
+  
 
   .headingSubtitle {
     font-size: var(--font-size-md);
@@ -1387,12 +1444,12 @@
 }
 
 .statsHeading {
-  font-size: 2.2rem;
-  color:white;
-  font-weight: 500;
-  line-height: 1.4;
-  max-width: 800px;
-  margin: 0 auto 4rem;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 700px;
+  margin: 0 auto 3rem;
   text-align: center;
 }
 
@@ -1401,61 +1458,68 @@
   justify-content: space-around;
   margin-bottom: 5rem;
   flex-wrap: wrap;
+  background-color: var(--color-secondary-light);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .statItem {
   text-align: center;
-  padding: 0 1rem;
+  padding: 1rem;
+  margin: 0.25rem;
+  min-width: 140px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius-lg);
-  padding: 2rem;
-  margin: 0 0.5rem;
-  min-width: 180px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .statItem:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .statValue {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .statLabel {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
   opacity: 0.9;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .skillsContainer {
   flex: 1;
-  margin: 4rem auto 2rem;
-  max-width: 800px;
+  margin: 4rem 0 2rem;
+  width:100%;
+  max-width: 500px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius-lg);
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .skillItem {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .skillInfo {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .skillName {
@@ -1484,10 +1548,10 @@
 .skillsWrapper {
   display: flex;
   align-items: center;
-  gap: 4rem;
-  max-width: 1000px;
+  gap: 1rem;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 0.5rem;
 }
 
 .statsImage {
@@ -1572,6 +1636,7 @@
 }
 
 @media (max-width: 768px) {
+ 
   .whyChooseGrid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -1594,6 +1659,77 @@
     font-size: 1.25rem;
   }
 }
+
+/* Certifications Section Styles */
+.certificationsSection {
+  padding: 6rem 0;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.certificationsContent {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.certificationItem {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.certificationItem:hover {
+  transform: translateY(-10px);
+}
+
+.certificationItem img {
+  filter: none; /* Removed filter */
+  stroke: none; /* Removed stroke */
+  color: #ffffff; /* Set icon color to white for better visibility */
+  background-color: var(--color-primary); /* Added background color for contrast */
+  border-radius: 50%; /* Make background round */
+  padding: 10px; /* Add some padding around the icon */
+}
+
+.certificationItem h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-light);
+}
+
+.certificationItem p {
+  color: var(--color-light-gray);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .certificationsContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .certificationItem {
+    padding: 1.5rem;
+  }
+
+  .certificationItem h3 {
+    font-size: 1.25rem;
+  }
+
+  .certificationItem p {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Classes Section Styles */
 .classesSection {
@@ -1631,6 +1767,37 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .classesHeading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .classesTypes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .classType {
+    padding: 1.5rem;
+  }
+
+  .classTypeIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+  }
+
+  .classTypeIcon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .featuresList li {
+    font-size: 0.9rem;
+  }
 }
 
 .classType {
@@ -1687,16 +1854,88 @@
   font-weight: bold;
 }
 
+.courseMetadata {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metadataItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-light-gray);
+  font-size: 0.9rem;
+}
+
+.metadataIcon {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+/* Company Logos Section */
+.companyLogosSection {
+  padding: 4rem 0;
+  background-color: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.companyLogosContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logoWrapper {
+  background-color: var(--color-secondary-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 16/9;
+}
+
+.logoWrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.companyLogo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logoWrapper:hover .companyLogo {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
-  .classesTypes {
-    flex-direction: column;
+  .logosGrid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
   }
-
-  .classesHeading h2 {
-    font-size: 2.5rem;
-  }
-
-  .classType {
-    margin-bottom: 2rem;
+  
+  .logoWrapper {
+    padding: 1rem;
   }
 }

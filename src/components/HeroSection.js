@@ -4,7 +4,6 @@ import * as motion from "motion/react-client"
 import styles from '/public/styles/Home.module.css';
 
 export default function HeroSection() {
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -25,34 +24,9 @@ export default function HeroSection() {
     }
   };
 
-  
-  
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroBgOverlay}></div>
-      
-      {/* Animated background elements */}
-      <div className={styles.heroBgElements}>
-        <motion.div 
-          className={`${styles.heroBgCircle} ${styles.circle1}`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.7, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.3 }}
-        />
-        <motion.div 
-          className={`${styles.heroBgCircle} ${styles.circle2}`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.5, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.6 }}
-        />
-        <motion.div 
-          className={`${styles.heroBgCircle} ${styles.circle3}`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.3, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.9 }}
-        />
-      </div>
-      
       <div className={styles.heroContent}>
         <motion.div
           className={styles.heroImageContainer}
@@ -71,16 +45,16 @@ export default function HeroSection() {
               ease: "easeInOut"
             }}
           >
-            <div className={styles.heroImage} style={{ position: 'relative', height: '500px', width: '100%' }}>
+            <div className={styles.heroImage}>
               <Image
                 src="/images/hero-image.png"
                 alt="Digital Business Solutions"
-                fill
-                style={{ objectFit: 'cover' }}
+                width={500}
+                height={500}
+                layout="responsive"
                 priority
               />
             </div>
-            <div className={styles.imageDecoration}></div>
           </motion.div>
         </motion.div>
 
@@ -91,11 +65,11 @@ export default function HeroSection() {
           animate="visible"
         >
           <motion.h1 variants={itemVariants}>
-            Transforming Brands in the Digital Age
+          Empowering Learners for Success in Digital Marketing
           </motion.h1>
           
           <motion.p variants={itemVariants}>
-            With a blend of creativity and innovation, we craft bespoke solutions that resonate with your target audience.
+          With expert-led courses and practical insights, we help you master the art of digital marketing and launch a thriving career in the digital world.
           </motion.p>
           
           <motion.div className={styles.heroCta} variants={itemVariants}>
@@ -103,22 +77,11 @@ export default function HeroSection() {
               Get Started
             </Link>
             <Link href="/services" className={styles.secondaryButton}>
-              Portfolios
+              Explore Now
             </Link>
           </motion.div>
         </motion.div>
       </div>
-
-            
-
-      <motion.div 
-        className={styles.heroPattern}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.7 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        {/* Removed pattern image as it's part of the new hero image */}
-      </motion.div>
     </section>
   );
 }

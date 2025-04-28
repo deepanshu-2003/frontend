@@ -89,10 +89,6 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          
-          <Link href="/about" className={styles.aboutButton}>
-            Learn More About Us
-          </Link>
         </motion.div>
       </div>
     </section>

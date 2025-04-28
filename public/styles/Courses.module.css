@@ -1,0 +1,391 @@
+/* Courses Section Styles */
+.coursesSection {
+  padding: 5rem 0;
+  background-color: var(--color-secondary); /* Use the dark purple background */
+  color: var(--color-text-light); /* Set text color to light */
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax for larger cards */
+  gap: 2rem; /* Increase gap between cards */
+  max-width: 1200px;
+  margin: 3rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.courseCard {
+  background-color: var(--color-secondary-light); /* Use a lighter shade for card background */
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem; /* Increase padding */
+  box-shadow: var(--shadow-md); /* Use a slightly larger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to transition */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--color-primary); /* Keep the primary color border */
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+.courseCard:hover {
+  transform: translateY(-10px); /* Increase hover lift */
+  box-shadow: var(--shadow-lg); /* Use a larger shadow on hover */
+}
+
+.courseIcon {
+  font-size: 3rem; /* Increase icon size */
+  color: var(--color-primary); /* Use the primary color for icons */
+  margin-bottom: 1rem; /* Increase margin below icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.courseIcon:hover {
+  transform: scale(1.1);
+}
+
+.courseIcon svg {
+  width: 40px; /* Adjust SVG size */
+  height: 40px; /* Adjust SVG size */
+}
+
+.courseTitle {
+  font-size: 1.25rem; /* Increase title font size */
+  color: var(--color-primary-light); /* Use a lighter primary color for titles */
+  margin: 0 0 0.5rem 0; /* Adjust margin */
+  font-weight: 600; /* Make title bolder */
+}
+
+.courseDescription {
+  color: var(--color-light-gray); /* Use light gray for description */
+  margin-bottom: 1.5rem; /* Increase margin below description */
+  flex-grow: 1;
+  font-size: 1rem; /* Increase description font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+.coursesCtaContainer {
+  text-align: center;
+  margin-top: 3rem; /* Increase margin above CTA button */
+}
+
+.coursesCta {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2.5rem; /* Increase padding */
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-base);
+  font-size: 1.1rem; /* Increase font size */
+}
+
+.coursesCta:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* Courses Page Section Styles */
+.coursesPageSection {
+  padding: 5rem 0;
+  background-color: var(--color-secondary); /* Use the dark purple background */
+  color: var(--color-text-light); /* Set text color to light */
+}
+
+.coursesPageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for larger cards */
+  gap: 3rem; /* Increase gap between cards */
+  max-width: 1200px;
+  margin: 3rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+/* Responsive Styles for Courses Grid and Cards */
+@media (max-width: 992px) {
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    gap: 1.5rem; /* Adjust gap */
+  }
+
+  .courseCard {
+    padding: 1.2rem; /* Adjust padding */
+  }
+
+  .courseIcon {
+    font-size: 2.5rem; /* Adjust icon size */
+  }
+
+  .courseIcon svg {
+    width: 35px; /* Adjust SVG size */
+    height: 35px; /* Adjust SVG size */
+  }
+
+  .courseTitle {
+    font-size: 1.1rem; /* Adjust title font size */
+  }
+
+  .courseDescription {
+    font-size: 0.9rem; /* Adjust description font size */
+  }
+
+  .coursesCta {
+    padding: 0.8rem 2rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Further adjust for smaller screens */
+    gap: 1rem; /* Further adjust gap */
+  }
+
+  .courseCard {
+    padding: 1rem; /* Further adjust padding */
+  }
+
+  .courseIcon {
+    font-size: 2rem; /* Further adjust icon size */
+    margin-bottom: 0.75rem; /* Adjust margin */
+  }
+
+  .courseIcon svg {
+    width: 30px; /* Further adjust SVG size */
+    height: 30px; /* Further adjust SVG size */
+  }
+
+  .courseTitle {
+    font-size: 1rem; /* Further adjust title font size */
+  }
+
+  .courseDescription {
+    font-size: 0.85rem; /* Further adjust description font size */
+    margin-bottom: 1rem; /* Adjust margin */
+  }
+
+  .coursesCta {
+    padding: 0.75rem 1.8rem; /* Further adjust padding */
+    font-size: 0.9rem; /* Further adjust font size */
+  }
+}
+
+@media (max-width: 576px) {
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for very small screens */
+  }
+}
+
+/* Learning Process Section Styles */
+.processSection {
+  padding: 5rem 0;
+  background-color: var(--color-secondary-dark); /* Use a darker shade for this section */
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.processSteps {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.processStep {
+  background-color: var(--color-secondary); /* Use secondary color for step background */
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid var(--color-primary);
+}
+
+.processStep:hover {
+  transform: translateY(-10px);
+}
+
+.stepNumber {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.processStep h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-light);
+}
+
+.processStep p {
+  color: var(--color-light-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CTA Section Styles */
+.ctaSection {
+  padding: 5rem 0;
+  background-color: var(--color-secondary); /* Use secondary color for CTA section */
+  color: var(--color-text-light);
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary-light);
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  color: var(--color-light-gray);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-base);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.ctaImageContainer {
+  display: none; /* Hide the image container for this design */
+}
+
+
+/* Page Heading and Subheading Styles */
+.pageHeading {
+  text-align: center;
+  color: white;
+}
+
+.pageSubheading {
+  text-align: center;
+  color: white;
+}
+
+/* Responsive Styles for Learning Process and CTA */
+@media (max-width: 992px) {
+  .processSteps {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .processStep {
+    max-width: 300px;
+    padding: 1.5rem;
+  }
+
+  .stepNumber {
+    font-size: 2rem;
+  }
+
+  .processStep h3 {
+    font-size: 1.25rem;
+  }
+
+  .processStep p {
+    font-size: 0.9rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .processStep {
+    padding: 1.2rem;
+  }
+
+  .stepNumber {
+    font-size: 1.8rem;
+  }
+
+  .processStep h3 {
+    font-size: 1.1rem;
+  }
+
+  .processStep p {
+    font-size: 0.85rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .ctaContent p {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .processStep {
+    padding: 1rem;
+  }
+
+  .stepNumber {
+    font-size: 1.5rem;
+  }
+
+  .processStep h3 {
+    font-size: 1rem;
+  }
+
+  .processStep p {
+    font-size: 0.8rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 1.5rem;
+  }
+
+  .ctaContent p {
+    font-size: 0.85rem;
+  }
+
+  .ctaButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}

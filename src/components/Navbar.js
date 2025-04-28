@@ -54,8 +54,8 @@ export default function Navbar({ isScrolled }) {
             <li className={pathname === '/' ? styles.active : ''}>
               <Link href="/">Home</Link>
             </li>
-            <li className={pathname === '/services' ? styles.active : ''}>
-              <Link href="/services">Services</Link>
+            <li className={pathname === '/courses' ? styles.active : ''}>
+              <Link href="/courses">Courses</Link>
             </li>
             {/* <li>
               <a href="https://learn.beehiveamore.com" target="_blank" rel="noopener noreferrer">Learn</a>
@@ -87,8 +87,8 @@ export default function Navbar({ isScrolled }) {
             <li className={pathname === '/' ? styles.active : ''}>
               <Link href="/" onClick={toggleMenu}>Home</Link>
             </li>
-            <li className={pathname === '/services' ? styles.active : ''}>
-              <Link href="/services" onClick={toggleMenu}>Services</Link>
+            <li className={pathname === '/courses' ? styles.active : ''}>
+              <Link href="/courses" onClick={toggleMenu}>Courses</Link>
             </li>
             {/* <li>
               <a href="https://learn.beehiveamore.com" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Learn</a>

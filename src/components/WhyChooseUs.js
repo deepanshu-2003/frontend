@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: '/images/brain-icon.svg',
-      title: 'Industry Ready Skills',
+      title: '100% Payment Refund',
       description: 'Get trained in the latest technologies and tools used in the industry.'
     },
     {

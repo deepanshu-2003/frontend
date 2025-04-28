@@ -84,11 +84,16 @@
 }
 
 .stepNumber {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
   margin-bottom: 1rem;
-  opacity: 0.3;
+  opacity: 0.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(var(--color-primary), var(--color-primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .processStep h3 {

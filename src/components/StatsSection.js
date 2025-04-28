@@ -23,52 +23,54 @@ export default function StatsSection() {
 
   const statItems = [
     {
-      value: 200,
-      suffix: '+',
-      label: 'HAPPY CLIENTS',
+      value: 6895,
+      suffix: '',
+      label: 'Enrolled Students',
       color: '#FDB515'
     },
     {
-      value: 85,
-      prefix: '>',
-      label: 'CLIENTS',
+      value: 524,
+      suffix: '+',
+      label: 'Active Larners',
       color: '#3498db'
     },
     {
-      value: 500,
+      value: 57,
       suffix: '+',
-      label: 'PROJECT COMPLETED',
+      label: 'Live Webinars',
       color: '#2ecc71'
     },
     {
-      value: 50,
+      value: 94,
       suffix: '+',
-      label: 'INDUSTRY REWARDS',
+      label: 'Certified Students',
       color: '#e05e97'
     }
   ];
 
   const skills = [
     {
-      name: 'Web Development',
+      name: 'Student Satisfaction Rate',
+      percentage: 98,
+      color: '#2ecc71'
+    },
+    {
+      name: 'Course Completion Rate',
       percentage: 95,
       color: '#FDB515'
     },
     {
-      name: 'Digital Marketing',
+      name: 'Students Placed',
+      percentage: 92,
+      color: '#e74c3c'
+    },
+    {
+      name: 'Live Session Participation Rate',
       percentage: 88,
       color: '#3498db'
     },
-    {
-      name: 'Brand Strategy',
-      percentage: 92,
-      color: '#2ecc71'
-    },
-    {
-      name: 'UX/UI Design',
-      percentage: 90,
-      color: '#e74c3c'
-    }
+    
+    
   ];
 
   // No complex useEffect needed, rely on useInView hooks
@@ -80,9 +82,7 @@ export default function StatsSection() {
         {/* No overall animation needed here, apply to children */}
         <div className={styles.statsContent}>
           <h2 className={styles.statsHeading}>
-            Through strategic thinking, creative execution, and a deep
-            understanding of the latest digital trends, we help our
-            clients thrive in an ever-evolving marketplace.
+          Through strategic insights, creative execution, and a deep understanding of the latest digital trends, we empower our learners to succeed in the fast-paced world of digital marketing.
           </h2>
 
           <div className={styles.statsContainer}>

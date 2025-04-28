@@ -1,0 +1,198 @@
+/* Copy of styles from Courses.module.css */
+
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #2a1a3a; /* Dark purple background */
+  color: white;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-color: #2a1a3a; /* Dark purple background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroContent {
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.heroContent h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #ffc107; /* Yellow color for heading */
+}
+
+.heroContent p {
+  font-size: 1.2em;
+  color: white;
+}
+
+.coursesSection {
+  padding: 60px 20px;
+  background-color: #2a1a3a; /* Dark purple background */
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Decreased min width slightly */
+  gap: 30px;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Use auto-fill to allow less than 3 in the last row */
+  max-width: 1050px; /* Adjusted max width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.courseCard {
+  background-color: #3a2a4a; /* Slightly lighter purple for cards */
+  border: 2px solid #ffc107; /* Yellow border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.courseCard:hover {
+  transform: translateY(-10px);
+}
+
+.courseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.courseIcon {
+  background-color: #ffc107; /* Yellow background for icon */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courseIcon svg {
+  color: #2a1a3a; /* Dark purple icon color */
+}
+
+.courseLevel {
+  background-color: #ffc107; /* Yellow background for level */
+  color: #2a1a3a; /* Dark purple text color */
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+.courseTitle {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffc107; /* Yellow color for title */
+}
+
+.courseDescription {
+  font-size: 1em;
+  color: white;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.courseHighlights {
+  margin-bottom: 20px;
+}
+
+.courseHighlights h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #ffc107; /* Yellow color for highlights heading */
+}
+
+.courseHighlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.courseHighlights li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.highlightIcon {
+  margin-right: 10px;
+  color: #ffc107; /* Yellow color for highlight icon */
+}
+
+.courseDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ffc107; /* Yellow border top */
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 0.9em;
+}
+
+.detailItem svg {
+  margin-right: 5px;
+  color: #ffc107; /* Yellow color for detail icon */
+}
+
+.enrollButton {
+  display: inline-block;
+  background-color: #ffc107; /* Yellow background for button */
+  color: #2a1a3a; /* Dark purple text color */
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enrollButton:hover {
+  background-color: #ffda6a; /* Lighter yellow on hover */
+}
+
+/* CoursesSection specific styles (from CoursesSection.module.css) */
+.coursesCtaContainer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.coursesCta {
+  display: inline-block;
+  background-color: #ffc107; /* Yellow background for CTA button */
+  color: #2a1a3a; /* Dark purple text color */
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.coursesCta:hover {
+  background-color: #ffda6a; /* Lighter yellow on hover */
+}

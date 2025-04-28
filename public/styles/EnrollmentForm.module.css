@@ -1,0 +1,103 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #282c34; /* Dark background */
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+  position: relative;
+  margin-top: 50px; /* Added top margin */
+}
+
+.modalContent h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fbc02d; /* Yellow/gold accent color */
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #e0e0e0; /* Light grey for labels */
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="tel"],
+.formGroup input[type="email"],
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #3a3f47; /* Slightly lighter dark for input background */
+  color: #fff; /* White text */
+}
+
+.submitButton,
+.closeButton {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton {
+  background-color: #fbc02d; /* Yellow/gold accent color */
+  color: #282c34; /* Dark text for contrast */
+  margin-right: 10px;
+}
+
+.submitButton:hover {
+  background-color: #f9a825; /* Slightly darker yellow/gold on hover */
+}
+
+.closeButton {
+  background-color: #555; /* Dark grey for close button */
+  color: white;
+}
+
+.closeButton:hover {
+  background-color: #666; /* Slightly lighter grey on hover */
+}
+
+.successMessage {
+  text-align: center;
+  color: #e0e0e0; /* Light grey text */
+}
+
+.successMessage h2 {
+  color: #fbc02d; /* Yellow/gold accent color */
+  margin-bottom: 15px;
+}
+
+.successMessage p {
+  margin-bottom: 20px;
+}
+
+.closeButton:hover {
+  background-color: #5a6268;
+}
