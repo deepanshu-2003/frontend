@@ -29,7 +29,7 @@ const CertificationsSection = () => {
         </motion.div>
 
       <div className={styles.companyLogosContent}> {/* Using companyLogosContent styles */}
-        <div className={styles.logosGrid}> {/* Using logosGrid styles for animation */}
+        <div className={styles.certificationsLogosGrid}> {/* Using logosGrid styles for animation */}
           {duplicatedCertifications.map((certification, index) => (
             <div key={index} className={styles.logoWrapper}> {/* Using logoWrapper styles */}
               <Image

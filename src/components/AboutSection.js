@@ -40,10 +40,10 @@ export default function AboutSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h3>Building Digital Success Since 2015</h3>
-          <p>
+          <p className={styles.description}>
             At Beehive Amore, we're passionate about helping businesses thrive in the digital landscape. As a leading digital marketing agency, we provide comprehensive digital marketing services and also offer advanced coding education in areas like web development, app development, and AI/ML. Just like a beehive represents community, productivity, and sweet results, we work collaboratively to deliver solutions that help our clients succeed.
           </p>
-          <p>
+          <p className={styles.description}>
             Our team of experienced digital marketing and coding professionals brings together diverse skills and perspectives, allowing us to approach each project with creativity and innovation. We believe in building lasting partnerships with our clients, understanding their unique challenges in the digital landscape, and delivering tailored solutions that exceed expectations.
           </p>
           

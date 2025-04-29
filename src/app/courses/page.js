@@ -25,13 +25,13 @@ export default function Courses() {
 
   const courses = [
     {
-      title: 'Digital Marketing Mastery',
+      title: 'Digital Marketing',
       description: 'Comprehensive training in digital marketing strategies, SEO, social media, and analytics',
       duration: '12 weeks',
       students: '350+',
       lectures: '48',
       level: 'All Levels',
-      image: '/images/digital-marketing-icon.svg',
+      image: '/images/icons/digital_marketing.svg',
       highlights: [
         'SEO & SEM Strategies',
         'Social Media Marketing',
@@ -41,115 +41,179 @@ export default function Courses() {
       ]
     },
     {
-      title: 'Social Media Marketing Pro',
-      description: 'Advanced strategies for social media advertising and community building.',
-      duration: '8 weeks',
-      students: '200+',
-      lectures: '32',
-      level: 'Intermediate to Advanced',
-      image: '/images/digital-marketing-icon.svg', // Assuming a generic digital marketing icon can be reused
-      highlights: [
-        'Platform-specific strategies',
-        'Paid social advertising',
-        'Influencer marketing',
-        'Social media analytics',
-        'Community engagement'
-      ]
-    },
-    {
-      title: 'Content Marketing Strategy',
-      description: 'Develop and execute effective content marketing plans.',
-      duration: '10 weeks',
-      students: '180+',
-      lectures: '40',
-      level: 'All Levels',
-      image: '/images/digital-marketing-icon.svg', // Assuming a generic digital marketing icon can be reused
-      highlights: [
-        'Content strategy development',
-        'Content creation and curation',
-        'Content distribution channels',
-        'Measuring content performance',
-        'Storytelling and copywriting'
-      ]
-    },
-    {
       title: 'Web Development',
-      description: 'Learn full-stack web development using modern technologies and frameworks',
+      description: 'Learn web development using WordPress',
       duration: '16 weeks',
       students: '250+',
       lectures: '64',
       level: 'Beginner to Advanced',
-      image: '/images/coding-icon.svg',
+      image: '/images/icons/web_development.svg',
       highlights: [
-        'HTML, CSS, JavaScript',
-        'React & Node.js',
-        'Database Management',
-        'API Development',
-        'Deployment & DevOps'
+        'WordPress Installation',
+        'Theme Customization',
+        'Plugin Development',
+        'Website Security',
+        'E-commerce with WooCommerce'
       ]
     },
     {
-      title: 'AI/ML Programming',
-      description: 'Master artificial intelligence and machine learning concepts and applications',
-      duration: '20 weeks',
-      students: '150+',
-      lectures: '72',
-      level: 'Intermediate',
-      image: '/images/brain-icon.svg',
-      highlights: [
-        'Python Programming',
-        'Deep Learning',
-        'Neural Networks',
-        'Computer Vision',
-        'NLP Applications'
-      ]
-    },
-    {
-      title: 'Email Marketing Automation',
-      description: 'Learn to build and automate effective email marketing campaigns.',
-      duration: '6 weeks',
-      students: '150+',
-      lectures: '24',
-      level: 'Intermediate',
-      image: '/images/digital-marketing-icon.svg',
+      title: 'Email and Whatsapp Marketing',
+      description: 'Master strategies for email and WhatsApp marketing campaigns.',
+      duration: '8 weeks',
+      students: '200+',
+      lectures: '32',
+      level: 'Intermediate to Advanced',
+      image: '/images/icons/email_whatsapp_marketing.svg',
       highlights: [
         'Email list building',
         'Email campaign design',
+        'WhatsApp marketing strategies',
         'Marketing automation tools',
-        'A/B testing and optimization',
-        'Email analytics'
+        'Analytics and reporting'
       ]
     },
     {
-      title: 'Google Ads and PPC',
-      description: 'Master paid advertising on Google and other platforms.',
-      duration: '8 weeks',
-      students: '220+',
-      lectures: '30',
+      title: 'Graphics Designing',
+      description: 'Learn the fundamentals of graphic design and popular design tools.',
+      duration: '10 weeks',
+      students: '180+',
+      lectures: '40',
+      level: 'All Levels',
+      image: '/images/icons/graphics_designing.svg',
+      highlights: [
+        'Design Principles',
+        'Adobe Photoshop',
+        'Adobe Illustrator',
+        'Typography',
+        'Color Theory'
+      ]
+    },
+    {
+      title: 'SEO optimisation',
+      description: 'Master search engine optimization techniques to improve website ranking.',
+      duration: '12 weeks',
+      students: '300+',
+      lectures: '45',
       level: 'Intermediate to Advanced',
-      image: '/images/digital-marketing-icon.svg',
+      image: '/images/icons/seo_optimization.svg',
       highlights: [
-        'Keyword research',
-        'Ad campaign creation',
-        'Bid management and optimization',
-        'Landing page optimization',
-        'PPC reporting and analysis'
+        'Keyword Research',
+        'On-Page SEO',
+        'Off-Page SEO',
+        'Technical SEO',
+        'SEO Analytics'
       ]
     },
     {
-      title: 'Affiliate Marketing Fundamentals',
-      description: 'Understand the basics of affiliate marketing and how to get started.',
-      duration: '5 weeks',
-      students: '100+',
-      lectures: '20',
-      level: 'Beginner',
-      image: '/images/digital-marketing-icon.svg',
+      title: 'Video Editing',
+      description: 'Learn video editing techniques and software for creating engaging videos.',
+      duration: '8 weeks',
+      students: '150+',
+      lectures: '30',
+      level: 'Beginner to Intermediate',
+      image: '/images/icons/video_editing.svg',
       highlights: [
-        'Affiliate networks and platforms',
-        'Finding profitable niches',
-        'Promotional methods',
-        'Tracking and analysis',
-        'Legal and ethical considerations'
+        'Video Editing Software',
+        'Cutting and Trimming',
+        'Adding Transitions and Effects',
+        'Color Correction',
+        'Audio Editing'
+      ]
+    },
+    {
+      title: 'Full stack development',
+      description: 'Become a full-stack developer using the MERN stack (MongoDB, Express, React, Node.js).',
+      duration: '20 weeks',
+      students: '280+',
+      lectures: '70',
+      level: 'Intermediate to Advanced',
+      image: '/images/icons/fullstack_development.svg',
+      highlights: [
+        'MongoDB Database',
+        'Express.js Framework',
+        'React.js Library',
+        'Node.js Runtime',
+        'Building RESTful APIs'
+      ]
+    },
+    {
+      title: 'App Development',
+      description: 'Learn to build mobile applications for iOS and Android using Flutter.',
+      duration: '18 weeks',
+      students: '220+',
+      lectures: '60',
+      level: 'Intermediate',
+      image: '/images/icons/app_development.svg',
+      highlights: [
+        'Mobile UI/UX Design',
+        'Flutter Framework',
+        'API Integration',
+        'State Management',
+        'App Deployment'
+      ]
+    },
+    {
+      title: 'Python Development',
+      description: 'Master Python programming for various applications, including web development and data science.',
+      duration: '14 weeks',
+      students: '300+',
+      lectures: '50',
+      level: 'Beginner to Advanced',
+      image: '/images/icons/python_development.svg',
+      highlights: [
+        'Python Fundamentals',
+        'Web Development frameworks',
+        'Data Analysis with Pandas',
+        'Machine Learning Libraries',
+        'Automation and Scripting'
+      ]
+    },
+    {
+      title: 'Data Science',
+      description: 'Learn data analysis, visualization, and machine learning techniques.',
+      duration: '16 weeks',
+      students: '200+',
+      lectures: '55',
+      level: 'Intermediate to Advanced',
+      image: '/images/icons/data_science.svg',
+      highlights: [
+        'Data Analysis with Pandas',
+        'Data Visualization with Matplotlib/Seaborn',
+        'Statistical Modeling',
+        'Machine Learning Algorithms',
+        'Big Data Concepts'
+      ]
+    },
+    {
+      title: 'Machine Learning and AI',
+      description: 'Master advanced machine learning concepts and artificial intelligence applications.',
+      duration: '20 weeks',
+      students: '180+',
+      lectures: '70',
+      level: 'Advanced',
+      image: '/images/icons/machine_learning_ai.svg',
+      highlights: [
+        'Deep Learning Frameworks (TensorFlow, PyTorch)',
+        'Neural Network Architectures',
+        'Natural Language Processing (NLP)',
+        'Computer Vision',
+        'AI Ethics and Bias'
+      ]
+    },
+    {
+      title: '2D and 3D Animations',
+      description: 'Learn 2D and 3D animation using Blender and AI tools.',
+      duration: '14 weeks',
+      students: '120+',
+      lectures: '48',
+      level: 'Beginner to Advanced',
+      image: '/images/icons/animation_2d_3d.svg',
+      highlights: [
+        'Blender Fundamentals',
+        '3D Modeling and Sculpting',
+        '2D Animation Techniques',
+        'AI-Assisted Animation',
+        'Rendering and Post-Production'
       ]
     }
   ];

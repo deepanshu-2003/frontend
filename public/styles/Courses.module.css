@@ -1,8 +1,8 @@
 /* Courses Section Styles */
 .coursesSection {
   padding: 5rem 0;
-  background-color: var(--color-secondary); /* Use the dark purple background */
-  color: var(--color-text-light); /* Set text color to light */
+  background-color: white; /* Change background to white */
+  color: black; /* Set text color to black */
 }
 
 .coursesGrid {
@@ -15,24 +15,25 @@
 }
 
 .courseCard {
-  background-color: var(--color-secondary-light); /* Use a lighter shade for card background */
+  background-color: white; /* Change card background to white */
   border-radius: var(--border-radius-lg);
   padding: 1.5rem; /* Increase padding */
   box-shadow: var(--shadow-md); /* Use a slightly larger shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Add box-shadow and border-color to transition */
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid var(--color-primary); /* Keep the primary color border */
+  border: 1.5px solid black; /* Change border to black 1.5px */
   text-decoration: none;
-  color: inherit; /* Inherit text color */
+  color: black; /* Change text color to black */
 }
 
 .courseCard:hover {
   transform: translateY(-10px); /* Increase hover lift */
   box-shadow: var(--shadow-lg); /* Use a larger shadow on hover */
+  border-color: var(--color-primary); /* Change border to golden on hover */
 }
 
 .courseIcon {
@@ -56,13 +57,13 @@
 
 .courseTitle {
   font-size: 1.25rem; /* Increase title font size */
-  color: var(--color-primary-light); /* Use a lighter primary color for titles */
+  color: var(--color-primary); /* Change title color to golden */
   margin: 0 0 0.5rem 0; /* Adjust margin */
   font-weight: 600; /* Make title bolder */
 }
 
 .courseDescription {
-  color: var(--color-light-gray); /* Use light gray for description */
+  color: black; /* Change description text color to black */
   margin-bottom: 1.5rem; /* Increase margin below description */
   flex-grow: 1;
   font-size: 1rem; /* Increase description font size */

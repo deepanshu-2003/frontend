@@ -5,8 +5,8 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: '/images/brain-icon.svg',
-      title: '100% Payment Refund',
-      description: 'Get trained in the latest technologies and tools used in the industry.'
+      title: '100% Payment Refund *',
+      description: '100% payment refund if not found the course valuable (Terms and Conditions applied)'
     },
     {
       icon: '/images/training-icon.svg',

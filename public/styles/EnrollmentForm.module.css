@@ -13,6 +13,7 @@
 
 .modalContent {
   background-color: #282c34; /* Dark background */
+  color: #e0e0e0; /* Light grey for text */
   padding: 30px;
   border-radius: 8px;
   width: 90%;
@@ -76,12 +77,12 @@
 }
 
 .closeButton {
-  background-color: #555; /* Dark grey for close button */
+  background-color: #3a3f47; /* Darker grey for close button */
   color: white;
 }
 
 .closeButton:hover {
-  background-color: #666; /* Slightly lighter grey on hover */
+  background-color: #555; /* Dark grey on hover */
 }
 
 .successMessage {

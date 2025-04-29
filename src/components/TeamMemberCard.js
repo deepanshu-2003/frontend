@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaLinkedinIn, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaTwitter, FaEnvelope, FaYoutube, FaInstagram, FaFacebook } from 'react-icons/fa';
 import styles from '/public/styles/Home.module.css';
 
 export default function TeamMemberCard({ member }) {
@@ -20,14 +20,14 @@ export default function TeamMemberCard({ member }) {
         <p className={styles.memberRole}>{member.role}</p>
         <p className={styles.memberBio}>{member.bio}</p>
         <div className={styles.memberSocial}>
-          <a href="#" aria-label="LinkedIn" className={styles.socialIcon}>
+          <a href="https://www.facebook.com/@beehiveamore/" aria-label="youtube" className={styles.socialIcon}>
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/beehiveamore/" aria-label="instagram" className={styles.socialIcon}>
+            <FaInstagram />
+          </a>
+          <a href="https://in.linkedin.com/in/beehive-amore-b5547b357" aria-label="LinkedIn" className={styles.socialIcon}>
             <FaLinkedinIn />
-          </a>
-          <a href="#" aria-label="Twitter" className={styles.socialIcon}>
-            <FaTwitter />
-          </a>
-          <a href="#" aria-label="Email" className={styles.socialIcon}>
-            <FaEnvelope />
           </a>
         </div>
       </div>

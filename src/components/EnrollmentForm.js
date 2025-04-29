@@ -9,6 +9,8 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
     selectedCourse: selectedCourse ? selectedCourse.title : ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false); // State to track submission success
+  const [submissionError, setSubmissionError] = useState(null); // State to track submission error
+  const [isProcessing, setIsProcessing] = useState(false); // State to track processing
 
   useEffect(() => {
     setFormData(prevFormData => ({
@@ -22,14 +24,37 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the formData to a backend or handle it further
-    console.log('Form submitted:', formData);
-    // Simulate a successful submission
-    setIsSubmitted(true);
-    // Optionally, you could add a delay before closing the form
-    // setTimeout(onClose, 3000);
+    setIsProcessing(true); // Set processing to true
+    setSubmissionError(null); // Clear previous errors
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/general/enroll`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          mobile: formData.mobileNumber,
+          email: formData.email,
+          course: formData.selectedCourse,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Enrollment successful!');
+        setIsSubmitted(true);
+        // Optionally, you could add a delay before closing the form
+        // setTimeout(onClose, 3000);
+      } else {
+        console.error('Enrollment failed:', response.statusText);
+        setSubmissionError('Enrollment failed. Please try again.'); // Set error message
+      }
+    } catch (error) {
+      console.error('Error submitting enrollment form:', error);
+      setSubmissionError('An error occurred during submission. Please try again.'); // Set error message
+    }
   };
 
   return (
@@ -41,7 +66,13 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
             <p>Your enrollment request has been submitted successfully.</p>
             <button type="button" className={styles.closeButton} onClick={onClose}>Close</button>
           </div>
-        ) : (
+        ) : submissionError ? ( // Show error message if submissionError is not null
+          <div className={styles.errorMessage}>
+            <h2>Error</h2>
+            <p>{submissionError}</p>
+            <button type="button" className={styles.closeButton} onClick={onClose}>Close</button>
+          </div>
+        ) : ( // Otherwise, show the form
           <>
             <h2>Enroll Now</h2>
             <form onSubmit={handleSubmit}>
@@ -54,6 +85,7 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
+                  disabled={isProcessing} // Disable input while processing
                 />
               </div>
               <div className={styles.formGroup}>
@@ -65,6 +97,7 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
                   value={formData.mobileNumber}
                   onChange={handleInputChange}
                   required
+                  disabled={isProcessing} // Disable input while processing
                 />
               </div>
               <div className={styles.formGroup}>
@@ -76,6 +109,7 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                  disabled={isProcessing} // Disable input while processing
                 />
               </div>
               <div className={styles.formGroup}>
@@ -86,6 +120,7 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
                   value={formData.selectedCourse}
                   onChange={handleInputChange}
                   required
+                  disabled={isProcessing} // Disable input while processing
                 >
                   <option value="">-- Select a Course --</option>
                   {courses.map((course, index) => (
@@ -93,8 +128,10 @@ const EnrollmentForm = ({ courses, onClose, selectedCourse }) => {
                   ))}
                 </select>
               </div>
-              <button type="submit" className={styles.submitButton}>Submit</button>
-              <button type="button" className={styles.closeButton} onClick={onClose}>Close</button>
+              <button type="submit" className={styles.submitButton} disabled={isProcessing}>
+                {isProcessing ? 'Processing...' : 'Submit'} {/* Change button text based on processing state */}
+              </button>
+              <button type="button" className={styles.closeButton} onClick={onClose} disabled={isProcessing}>Close</button> {/* Disable button while processing */}
             </form>
           </>
         )}

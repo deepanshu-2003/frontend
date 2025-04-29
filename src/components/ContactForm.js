@@ -15,15 +15,30 @@ export default function ContactForm() {
     setSubmitError(false);
 
     try {
-      // In a real application, this would send the form data to your backend
-      // For now, we'll simulate a successful submission after a delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Form submitted:', data);
-      reset();
-      setSubmitSuccess(true);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/general/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          mobile: data.phone, // Map frontend 'phone' to backend 'mobile'
+          subject: data.subject,
+          message: data.message,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Contact form submitted successfully!');
+        reset();
+        setSubmitSuccess(true);
+      } else {
+        console.error('Contact form submission failed:', response.statusText);
+        setSubmitError(true);
+      }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Error submitting contact form:', error);
       setSubmitError(true);
     } finally {
       setIsSubmitting(false);

@@ -6,7 +6,7 @@
   --color-primary-dark: #F09600;
   
   /* Secondary Colors */
-  --color-secondary: #281337; /* New primary background color */
+  --color-secondary: #F5F5DC; /* Off-white background color */
   --color-secondary-light: #3A1D4A;
   --color-secondary-dark: #1A0B24;
   
@@ -96,7 +96,7 @@ html, body {
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-text-light);
+  color: var(--color-black); /* Set text color to black for off-white background */
   background-color: var(--color-secondary);
   scroll-behavior: smooth;
 }

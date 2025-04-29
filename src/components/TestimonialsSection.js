@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import * as motion from "motion/react-client"
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -49,6 +49,14 @@ export default function TestimonialsSection() {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); // Change testimonial every 5 seconds
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, [currentIndex, testimonials.length]); // Re-run effect if currentIndex or testimonials change
 
   return (
     <section className={styles.testimonialsSection}>

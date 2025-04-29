@@ -5,32 +5,9 @@ import styles from "/public/styles/About.module.css";
 import SectionHeading from "../../components/SectionHeading";
 import TeamMemberCard from "../../components/TeamMemberCard";
 import AboutSection from "../../components/AboutSection";
+import TeamSection from "../../components/TeamSection"; // Import TeamSection component
 
 export default function About() {
-  const teamMembers = [
-    {
-          id: 1,
-          name: 'Pran Chaudhary',
-          role: 'Founder & CEO',
-          image: '/images/profile-image.jpg',
-          bio: 'With over 6 years of industry experience, Pran leads our team with vision and passion.'
-        },
-        {
-          id: 2,
-          name: 'Deepanshu Dixit',
-          role: 'Co-Founder & Tech. Geek',
-          image: '/images/profile-image.jpg',
-          bio: 'Passionate coding geek who thrives on building smart, scalable tech solutions with creativity and vision.'
-        },
-        {
-          id: 3,
-          name: 'Krishna Singhaniya',
-          role: 'Co-Foundner & Digital Marketing Expert',
-          image: '/images/profile-image.jpg',
-          bio: 'As Digital Marketing Expert, Krishna drives innovative strategies that fuel brand growth and deliver impactful, measurable results..'
-        },
-  ];
-
   return (
     <div className={styles.container}>
       <Head>
@@ -51,7 +28,7 @@ export default function About() {
             className={styles.heroContent}
           >
             <h1>About Us</h1>
-            <p>Get to know Beehive Amore and our passionate team</p>
+            <p className={styles.subHeading}>Get to know Beehive Amore and our passionate team</p>
           </motion.div>
         </div>
 
@@ -74,7 +51,7 @@ export default function About() {
                 title="Our Story"
                 subtitle="How Beehive Amore began and evolved"
               />
-              <p>
+              <p  className={styles.description}>
                 Founded in 2015, Beehive Amore emerged from a simple yet
                 powerful vision: to create a digital agency that truly
                 understands the needs of businesses in today's rapidly evolving
@@ -82,7 +59,7 @@ export default function About() {
                 collaboration, precision, and creating sweet results for our
                 clients.
               </p>
-              <p>
+              <p  className={styles.description}>
                 Over the years, we've grown from a small team of passionate
                 professionals to a full-service agency serving clients across
                 multiple industries. Through dedication to excellence and a
@@ -214,26 +191,8 @@ export default function About() {
           </div>
         </section>
 
-        <section className={styles.teamSection}>
-          <SectionHeading
-            title="Our Team"
-            subtitle="Meet the people behind Beehive Amore"
-          />
-
-          <div className={styles.teamGrid}>
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <TeamMemberCard member={member} />
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        {/* Use the TeamSection component */}
+        <TeamSection />
 
         <section className={styles.officeSection}>
           <SectionHeading

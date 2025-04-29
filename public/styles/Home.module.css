@@ -30,8 +30,8 @@
 
 .certificationsSection {
   padding: 6rem 0;
-  background-color: var(--color-secondary-dark);
-  color: var(--color-text-light);
+  background-color: transparent; /* Remove background color */
+  color: var(--color-black); /* Set text color to black */
   text-align: center;
 }
 
@@ -45,14 +45,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
-  padding:0; /* Further reduced padding */
-  z-index: var(--z-index-fixed);
-  transition: var(--transition-base);
+  background-color: var(--color-black); /* Set background to black */
+  padding: 1rem 0;
+  z-index: var(--z-index-sticky);
+  transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: var(--color-secondary);
+  background-color: var(--color-black);
   padding: 0; /* Further reduced padding */
   box-shadow: var(--shadow-md);
 }
@@ -184,7 +184,10 @@
 .heroSection {
   position: relative;
   padding: 10rem 0 5rem;
-  background-color: var(--color-secondary); /* Use the new dark purple background */
+  background-image: url('/images/hero-bg.jpg'); /* Set background image */
+  background-size: cover; /* Ensure image covers the section */
+  background-position: center; /* Center the background image */
+  /* background-color: var(--color-secondary); /* Use the new dark purple background */
   overflow: hidden;
   min-height: 85vh;
   display: flex;
@@ -244,7 +247,7 @@
   font-size: 3.5rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: var(--color-text-light); /* Adjust text color for dark background */
+  color: white; /* Change text color to white for better visibility */
   display: flex;
   flex-direction: column;
 }
@@ -258,13 +261,13 @@
 
 .heroTitleMain {
   font-size: 4rem;
-  color: var(--color-text-light); /* Adjust text color for dark background */
+  color: white; /* Change text color to white for better visibility */
   margin-bottom: 0.5rem;
 }
 
 .heroTitleBottom {
   font-size: 2.5rem;
-  color: var(--color-light-gray); /* Adjust text color for dark background */
+  color: white; /* Change text color to white for better visibility */
 }
 
 .accentText {
@@ -294,7 +297,7 @@
 .heroText p {
   font-size: 1.2rem;
   line-height: 1.7;
-  color: var(--color-light-gray); /* Adjust text color for dark background */
+  color: white; /* Change text color to white for better visibility */
   margin-bottom: 2.5rem;
   max-width: 90%;
 }
@@ -352,21 +355,21 @@
 
 .secondaryButton {
   display: inline-block;
-  background-color: transparent;
-  color: var(--color-text-light); /* Adjust text color for dark background */
+  background-color: var(--color-black); /* Set background to black */
+  color: var(--color-white); /* Set text color to white */
   padding: 1rem 2.5rem;
   border-radius: var(--border-radius-md);
   font-weight: var(--font-weight-medium);
-  border: 2px solid var(--color-text-light); /* Adjust border color for dark background */
+  border: 2px solid var(--color-white); /* Set border to white */
   transition: all 0.3s ease;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(var(--color-text-light-rgb), 0.05);
+  background-color: transparent; /* Change background to transparent on hover */
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-primary); /* Change text color to golden on hover */
+  border-color: var(--color-primary); /* Change border color to golden on hover */
 }
 
 .heroImageContainer {
@@ -399,7 +402,7 @@
 }
 
 .secondaryButton:hover {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 
@@ -436,10 +439,11 @@
   padding: 1rem;
   margin: 0.25rem;
   min-width: 140px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: white; /* Change background to white */
   border-radius: var(--border-radius-lg);
   box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  color: white; /* Set text color to white */
 }
 
 .statItem:hover {
@@ -572,8 +576,8 @@
 /* Services Section Styles */
 .servicesSection {
   padding: 5rem 0;
-  background-color: var(--color-secondary); /* Set background to dark purple */
-  color: var(--color-text-light); /* Set text color to light */
+  background-color: #F5F5DC; /* Set background to off-white */
+  color: var(--color-black); /* Set text color to black */
 }
 
 .coursesGrid {
@@ -586,7 +590,7 @@
 }
 
 .courseCard {
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-black);
   border-radius: var(--border-radius-lg);
   padding: 1rem;
   box-shadow: var(--shadow-sm);
@@ -626,12 +630,12 @@
 
 .courseTitle {
   font-size: 1rem;
-  color: var(--color-primary-light);
+  color: var(--color-white);
   margin: 0;
 }
 
 .courseDescription {
-  color: var(--color-light-gray);
+  color: var(--color-text-light);
   margin-bottom: 1rem;
   flex-grow: 1;
   font-size: 0.9rem;
@@ -738,7 +742,7 @@
 /* Testimonials Section Styles */
 .testimonialsSection {
   padding: 5rem 0;
-  background-color: var(--color-secondary); /* Apply dark purple background */
+  background-color: var(--color-black); /* Set background to black */
   color: var(--color-text-light); /* Set text color to light */
   position: relative;
 }
@@ -750,7 +754,7 @@
 }
 
 .testimonialsFeatured {
-  background-color: var(--color-secondary-light); /* Adjust background for contrast */
+  background-color: var(--color-dark-gray); /* Adjust background for contrast */
   border-radius: var(--border-radius-lg);
   padding: 3rem;
   position: relative;
@@ -759,9 +763,9 @@
 
 .quoteIcon {
   font-size: 2.5rem;
-  color: var(--color-primary);
+  color: var(--color-primary); /* Set color to primary golden */
   margin-bottom: 1rem;
-  opacity: 0.3;
+  opacity: 1; /* Remove opacity */
 }
 
 .testimonialContent {
@@ -791,7 +795,7 @@
 
 .authorInfo h4 {
   font-size: var(--font-size-md);
-  color: var(--color-primary-light); /* Adjust text color for contrast */
+  color: var(--color-primary); /* Set text color to primary golden */
   margin-bottom: 0.25rem;
 }
 
@@ -816,7 +820,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-secondary-dark); /* Adjust background for contrast */
+  background-color: var(--color-dark-gray); /* Adjust background for contrast */
   color: var(--color-white); /* Adjust text color for contrast */
   border: none;
   cursor: pointer;
@@ -835,7 +839,7 @@
 }
 
 .testimonialCardSmall {
-  background-color: var(--color-secondary-light); /* Adjust background for contrast */
+  background-color: var(--color-dark-gray); /* Adjust background for contrast */
   border-radius: var(--border-radius-md);
   padding: 1.5rem;
   transition: var(--transition-base);
@@ -847,13 +851,34 @@
 .testimonialCardSmall.activeTestimonial {
   background-color: var(--color-primary); /* Adjust background for contrast */
   transform: translateY(-5px);
+  color: var(--color-black); /* Set text color to black for contrast */
+}
+
+.testimonialCardSmall:hover .quoteIconSmall,
+.testimonialCardSmall.activeTestimonial .quoteIconSmall {
+  color: var(--color-black); /* Set icon color to black for contrast */
+}
+
+.testimonialCardSmall:hover .testimonialContentSmall,
+.testimonialCardSmall.activeTestimonial .testimonialContentSmall {
+  color: var(--color-black); /* Set text color to black for contrast */
+}
+
+.testimonialCardSmall:hover .authorInfoSmall h4,
+.testimonialCardSmall.activeTestimonial .authorInfoSmall h4 {
+  color: var(--color-black); /* Set text color to black for contrast */
+}
+
+.testimonialCardSmall:hover .authorInfoSmall p,
+.testimonialCardSmall.activeTestimonial .authorInfoSmall p {
+  color: var(--color-black); /* Set text color to black for contrast */
 }
 
 .quoteIconSmall {
   font-size: 1.25rem;
-  color: var(--color-primary);
+  color: var(--color-primary); /* Set color to primary golden */
   margin-bottom: 0.5rem;
-  opacity: 0.3;
+  opacity: 1; /* Remove opacity */
 }
 
 .testimonialContentSmall {
@@ -882,7 +907,7 @@
 
 .authorInfoSmall h4 {
   font-size: var(--font-size-sm);
-  color: var(--color-primary-light); /* Adjust text color for contrast */
+  color: var(--color-primary); /* Set text color to primary golden */
   margin-bottom: 0.1rem;
 }
 
@@ -895,37 +920,43 @@
 /* Team Section Styles */
 .teamSection {
   padding: 5rem 0;
-  background-color: var(--color-secondary); /* Apply dark purple background */
-  color: var(--color-text-light); /* Set text color to light */
+  background-color: white;
+  color: var(--color-black); /* Set text color to black */
 }
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   max-width: 1200px;
+  align-items: start; /* Align grid items to the top */
   margin: 3rem auto 3rem;
   padding: 0 1.5rem;
 }
 
 .teamCard {
-  background-color: var(--color-secondary-light); /* Adjust background for contrast */
+  background-color: white;
+  border: 1.5px solid black;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
-  height: 100%;
+  /* height: 100%; */
+  padding-bottom: 1rem;
 }
 
 .teamCard:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .memberImageContainer {
   position: relative;
-  height: 300px;
-  width: 100%;
+  height: 200px; /* Reduced height to make card more square */
+  width: auto;
+  height: 100%;
+  max-height: fit-content;
   overflow: hidden;
   display: flex; /* Add flexbox to center the image */
   justify-content: center; /* Center horizontally */
@@ -946,20 +977,20 @@
 
 .memberName {
   font-size: var(--font-size-lg);
-  color: var(--color-primary-light); /* Adjust text color for contrast */
+  color: var(--color-black); /* Set text color to black */
   margin-bottom: 0.25rem;
 }
 
 .memberRole {
   font-size: var(--font-size-sm);
-  color: var(--color-primary);
+  color: var(--color-primary); /* Set color to primary golden */
   margin-bottom: 1rem;
   font-weight: var(--font-weight-medium);
 }
 
 .memberBio {
   font-size: var(--font-size-sm);
-  color: var(--color-light-gray); /* Adjust text color for contrast */
+  color: var(--color-gray); /* Adjust text color */
   margin-bottom: 1.5rem;
 }
 
@@ -972,8 +1003,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: var(--color-secondary-dark); /* Adjust background for contrast */
-  color: var(--color-white); /* Adjust text color for contrast */
+  background-color: var(--color-black); /* Set background to black */
+  color: var(--color-white); /* Set text color to white */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -981,8 +1012,8 @@
 }
 
 .socialIcon:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary); /* Set hover background to primary golden */
+  color: var(--color-white); /* Set hover text color to white */
 }
 
 .teamBanner {
@@ -990,7 +1021,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-black); /* Set background to black */
   border-radius: var(--border-radius-lg);
   overflow: hidden;
 }
@@ -998,16 +1029,16 @@
 .bannerContent {
   flex: 1;
   padding: 3rem;
-  color: var(--color-white);
+  color: var(--color-white); /* Set text color to white */
 }
 
 .bannerContent h3 {
-  color: var(--color-white);
+  color: var(--color-white); /* Set text color to white */
   margin-bottom: 1rem;
 }
 
 .bannerContent p {
-  color: var(--color-light-gray);
+  color: var(--color-light-gray); /* Adjust text color */
   margin-bottom: 1.5rem;
 }
 
@@ -1058,7 +1089,7 @@
 
 .headingSubtitle {
   font-size: var(--font-size-lg);
-  color: var(--color-light-gray); /* Adjust subtitle color for contrast */
+  color: var(--color-black); /* Adjust subtitle color for off-white background */
   margin-bottom: 1rem;
 }
 
@@ -1079,9 +1110,9 @@
 
 /* Footer Styles */
 .footer {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-black); /* Set background to black */
   color: var(--color-light-gray);
-  padding-top: 5rem;
+  padding: var(--spacing-8) 0;
 }
 
 .footerTop {
@@ -1319,11 +1350,11 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    background-color: var(--color-secondary-light);
-    padding: 1.5rem;
-    box-shadow: var(--shadow-md);
-  }
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
 
   .mobileNavLinks {
     list-style: none;
@@ -1424,8 +1455,8 @@
 /* Stats Section Styles */
 .statsSection {
   padding: 6rem 0;
-  background-color: var(--color-secondary-dark);
-  color: white;
+  background-color: white; /* Change background to white */
+  color: black; /* Change text color to black for visibility on white background */
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
@@ -1434,7 +1465,7 @@
 .statsBgOverlay {
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)); /* Remove background image */
 }
 
 .statsContent {
@@ -1445,8 +1476,8 @@
 
 .statsHeading {
   font-size: 1.8rem;
-  color: white;
-  font-weight: 400;
+  color: var(--color-primary);
+  font-weight: 600;
   line-height: 1.3;
   max-width: 700px;
   margin: 0 auto 3rem;
@@ -1458,7 +1489,7 @@
   justify-content: space-around;
   margin-bottom: 5rem;
   flex-wrap: wrap;
-  background-color: var(--color-secondary-light);
+  background-color: black !important; /* Change background to white */
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
@@ -1473,10 +1504,11 @@
   padding: 1rem;
   margin: 0.25rem;
   min-width: 140px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-dark-gray); /* Keep background dark */
   border-radius: var(--border-radius-lg);
   box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  color: white; /* Set text color to white */
 }
 
 .statItem:hover {
@@ -1492,6 +1524,7 @@
   align-items: center;
   justify-content: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--color-primary);
 }
 
 .statLabel {
@@ -1499,6 +1532,7 @@
   letter-spacing: 1px;
   opacity: 0.9;
   font-weight: 500;
+  color: var(--color-text-light);
 }
 
 .skillsContainer {
@@ -1506,10 +1540,11 @@
   margin: 4rem 0 2rem;
   width:100%;
   max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: black; /* Change background to black */
   border-radius: var(--border-radius-lg);
   padding: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: white; /* Set text color to white */
 }
 
 .skillItem {
@@ -1573,9 +1608,9 @@
 
 /* Why Choose Us Section */
 .whyChooseSection {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-white); /* Set background to white */
   padding: 4rem 0;
-  color: var(--color-text-light);
+  color: var(--color-black);
 }
 
 .whyChooseContent {
@@ -1592,16 +1627,17 @@
 }
 
 .whyChooseCard {
-  background-color: var(--color-secondary);
+  background-color: var(--color-white); /* Set background to white */
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   transition: transform 0.3s ease;
-  border: 2px solid transparent;
+  border: 1.5px solid var(--color-black); /* Set border to 1.5px solid black */
+  color: var(--color-black); /* Set text color to black for white background */
 }
 
 .whyChooseCard:hover {
   transform: translateY(-10px);
-  border-color: var(--color-primary);
+  border-color: var(--color-primary); /* Keep golden border on hover */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -1624,13 +1660,13 @@
 
 .whyChooseTitle {
   font-size: 1.5rem;
-  color: var(--color-primary-light);
+  color: var(--color-primary);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .whyChooseDescription {
-  color: var(--color-light-gray);
+  color: var(--color-black) !important; /* Set text color to black and make it important */
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -1677,7 +1713,7 @@
 }
 
 .certificationItem {
-  background-color: var(--color-secondary);
+  background-color: transparent; /* Remove background color */
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   max-width: 300px;
@@ -1690,12 +1726,12 @@
 }
 
 .certificationItem img {
-  filter: none; /* Removed filter */
-  stroke: none; /* Removed stroke */
-  color: #ffffff; /* Set icon color to white for better visibility */
-  background-color: var(--color-primary); /* Added background color for contrast */
-  border-radius: 50%; /* Make background round */
-  padding: 10px; /* Add some padding around the icon */
+  filter: none; /* Ensure no filter is applied */
+  stroke: none; /* Ensure no stroke is applied */
+  color: initial; /* Reset color to default */
+  background-color: transparent; /* Remove background color */
+  border-radius: 0; /* Remove border radius */
+  padding: 0; /* Remove padding */
 }
 
 .certificationItem h3 {
@@ -1734,8 +1770,8 @@
 /* Classes Section Styles */
 .classesSection {
   padding: 6rem 0;
-  background-color: var(--color-secondary);
-  color: var(--color-text-light);
+  background-color: var(--color-white); /* Set background to white */
+  color: var(--color-black);
 }
 
 .classesContent {
@@ -1753,13 +1789,13 @@
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--color-text-light);
+  color: var(--color-primary);
 }
 
 .classesHeading p {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--color-light-gray);
+  color: var(--color-black);
   max-width: 600px;
 }
 
@@ -1802,7 +1838,8 @@
 
 .classType {
   flex: 1;
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-white); /* Set background to white */
+  border: 1.5px solid var(--color-black); /* Set border to 1.5px solid black */
   border-radius: var(--border-radius-lg);
   padding: 2.5rem;
   transition: transform 0.3s ease;
@@ -1810,6 +1847,8 @@
 
 .classType:hover {
   transform: translateY(-10px);
+  border-color: var(--color-primary); /* Change border color to golden on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .classTypeIcon {
@@ -1831,7 +1870,8 @@
 .classTypeIcon img {
   width: 50px;
   height: 50px;
-  filter: brightness(0) invert(1);
+  filter: none; /* Remove filter */
+  color: var(--color-black); /* Set icon color to black */
 }
 
 .featuresList {
@@ -1844,7 +1884,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
-  color: var(--color-light-gray);
+  color: var(--color-black); /* Set text color to black */
   font-size: 0.95rem;
 }
 
@@ -1878,7 +1918,7 @@
 /* Company Logos Section */
 .companyLogosSection {
   padding: 4rem 0;
-  background-color: var(--color-secondary);
+  background-color: white;
   position: relative;
   overflow: hidden;
 }
@@ -1895,7 +1935,7 @@
   gap: 2rem;
   margin-top: 3rem;
   align-items: center;
-  animation: scrollLogos 30s linear infinite;
+  animation: scrollLogos 20s linear infinite;
   white-space: nowrap;
   width: fit-content;
 }
@@ -1909,9 +1949,28 @@
   }
 }
 
+.certificationsLogosGrid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+  animation: scrollCertificationsLogos 10s linear infinite;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+@keyframes scrollCertificationsLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .logoWrapper {
   flex: 0 0 200px;
-  background-color: var(--color-secondary-light);
+  background-color: transparent; /* Remove background color */
   padding: 1.5rem;
   border-radius: var(--border-radius-md);
   transition: transform 0.3s ease;
@@ -1931,8 +1990,8 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
+  filter: none;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 

@@ -76,7 +76,7 @@ export default function HeroSection() {
             <Link href="/contact" className={`${styles.primaryButton} ${styles.pulseButton}`}>
               Get Started
             </Link>
-            <Link href="/services" className={styles.secondaryButton}>
+            <Link href="/courses" className={styles.secondaryButton}>
               Explore Now
             </Link>
           </motion.div>
