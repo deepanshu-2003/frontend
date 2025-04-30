@@ -44,7 +44,7 @@ export default function Navbar({ isScrolled }) {
                 />
               </div>
               <div className={styles.logoText}>
-                <span className={styles.logoTextYellow}>BEE</span>HIVE AMORE
+                <span className={styles.logoTextYellow}>BEE</span>H!VE AMORE
               </div>
             </div>
         </Link>
