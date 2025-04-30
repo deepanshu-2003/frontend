@@ -12,31 +12,73 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: 'Swati Mishra',
-      position: 'Business Owner',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
-      content: 'Beehive Amore transformed our digital presence completely. Their strategic approach to our marketing challenges resulted in a 200% increase in qualified leads within just three months.'
+      name: 'Anita Mittal',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Anita_Mittal.jpg',
+      content: 'Learning Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All at Beehive Amore was a transformative experience. The comprehensive curriculum and expert instructors provided me with the skills and knowledge to excel in the industry.'
     },
     {
       id: 2,
-      name: 'Amit Shubhankar',
-      position: 'Founder of an Institute',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-      content: 'Working with the Beehive Amore team has been a game-changer for our business. Their creativity, attention to detail, and commitment to our success exceeded all expectations.'
+      name: 'Deepak Kumar',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Deepak_Kumar.jpg',
+      content: 'Beehive Amore offers an exceptional learning environment. The hands-on approach to Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All helped me grasp complex concepts easily and build practical skills.'
     },
     {
       id: 3,
-      name: 'Naina Kumar',
-      position: 'HOD Management',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80',
-      content: 'As a small business owner, I needed a partner who understood my vision and could help bring it to life digitally. Beehive Amore delivered exactly that, with professionalism and expertise.'
+      name: 'Karan Garg',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Karan_Garg.jpeg',
+      content: 'I am incredibly grateful for the education I received at Beehive Amore. The courses in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All were thorough and directly applicable to real-world scenarios.'
     },
     {
       id: 4,
-      name: 'Rohan Sharma',
-      position: 'Sales Manager',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80',
-      content: "The level of service and expertise provided by Beehive Amore is truly exceptional. They don't just deliver results; they become an extension of your team, invested in your success."
+      name: 'Kavita Sharma',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Kavita_Sharma.jpg',
+      content: 'Beehive Amore is the best place to learn Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All. The instructors are highly knowledgeable and supportive, making the learning journey enjoyable and effective.'
+    },
+    {
+      id: 5,
+      name: 'Komal Sharma',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Komal_Sharma.jpg',
+      content: 'The comprehensive programs at Beehive Amore in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All equipped me with a diverse skill set that is highly valued in the current job market.'
+    },
+    {
+      id: 6,
+      name: 'Rashmi Kaur',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Rashmi_Kaur.jpg',
+      content: 'I highly recommend Beehive Amore for anyone looking to gain expertise in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All. The quality of education and the career guidance provided are outstanding.'
+    },
+    {
+      id: 7,
+      name: 'Rohan Kumar',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Rohan_Kumar.jpeg',
+      content: 'Beehive Amore provided me with a strong foundation in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All. The practical projects and industry insights were invaluable.'
+    },
+    {
+      id: 8,
+      name: 'Rohit Gaur',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Rohit_Gaur.jpeg',
+      content: 'The learning experience at Beehive Amore was exceptional. The courses in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All are well-structured and delivered by experienced professionals.'
+    },
+    {
+      id: 9,
+      name: 'Saurabh Patel',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Saurabh_Patel.jpg',
+      content: 'Beehive Amore is a fantastic institution for anyone serious about a career in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All. The support and resources available to students are top-notch.'
+    },
+    {
+      id: 10,
+      name: 'Sunita Aggrawal',
+      position: 'Student at Beehive Amore',
+      image: '/images/testimonials/Sunita_Aggrawal.jpg',
+      content: 'I am very satisfied with the training I received at Beehive Amore. The courses in Digital Marketing, SEO, Full stack Web development, AI and Machine Learning, Graphics Designing, and All are comprehensive and up-to-date with the latest industry trends.'
     }
   ];
 
@@ -61,8 +103,8 @@ export default function TestimonialsSection() {
   return (
     <section className={styles.testimonialsSection}>
       <SectionHeading
-        title="What Clients Say"
-        subtitle="Success Stories from Our Partners"
+        title="What Students say"
+        subtitle="Success Stories of Beehive Amore"
       />
 
       <div className={styles.testimonialsContainer}>
@@ -86,7 +128,6 @@ export default function TestimonialsSection() {
                   alt={testimonials[currentIndex].name}
                   width={60}
                   height={60}
-                  style={{ objectFit: 'cover' }}
                   className={styles.authorAvatar}
                 />
               </div>
@@ -113,22 +154,6 @@ export default function TestimonialsSection() {
               <FaChevronRight />
             </button>
           </div>
-        </div>
-
-        <div className={styles.testimonialsList}>
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${styles.testimonialCard} ${index === currentIndex ? styles.activeCard : ''}`}
-              onClick={() => setCurrentIndex(index)}
-            >
-              <TestimonialCard testimonial={testimonial} isActive={index === currentIndex} />
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

@@ -35,7 +35,7 @@ export default function Navbar({ isScrolled }) {
             <div className={styles.logo}>
               <div className={styles.logoImage}>
                 <Image 
-                  src="/images/beehive-logo-proper.png" 
+                  src="/images/beehive-logo.png" 
                   alt="Beehive Amore Logo" 
                   width={60} 
                   height={60} 

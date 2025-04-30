@@ -42,47 +42,56 @@ export default function CoursesSection() {
       path: '/courses'
     },
     {
-      id: 2,
-      title: 'Full Stack Dev',
-      description: 'Complete web development',
-      icon: <FaLaptopCode />,
-      path: '/courses'
-    },
-    {
-      id: 3,
-      title: 'App Development',
-      description: 'Mobile app development',
-      icon: <FaMobileAlt />,
-      path: '/courses'
-    },
-    {
       id: 4,
-      title: 'Graphic Design',
-      description: 'Creative design solutions',
-      icon: <FaPencilRuler />,
+      title: 'Web Development',
+      description: 'Professional WordPress website development',
+      icon: <FaWordpress />,
       path: '/courses'
     },
     {
       id: 5,
+      title: 'Email & Whatsapp marketing',
+      description: 'Email and Whatsapp marketing and automation',
+      icon: <FaMobileAlt />,
+      path: '/courses'
+    },
+    {
+      id: 6,
+      title: 'Graphics Designing',
+      description: 'Creative design solutions learning',
+      icon: <FaPalette />,
+      path: '/courses'
+    },
+    {
+      id: 7,
       title: 'SEO Optimization',
       description: 'Search Engine Optimization',
       icon: <FaSearch />,
       path: '/courses'
     },
     {
-      id: 15,
-      title: 'WordPress Pro',
-      description: 'Professional WordPress development',
-      icon: <FaWordpress />,
-      path: '/courses'
-    },
-    {
-      id: 18,
+      id: 8,
       title: 'Video Editing',
       description: 'Professional video editing',
       icon: <FaVideo />,
       path: '/courses'
     },
+    {
+      id: 9,
+      title: 'Full Stack Devlopment',
+      description: 'Development using MERN Stack',
+      icon: <FaReact />,
+      path: '/courses'
+    },
+    {
+      id: 10,
+      title: 'Python Programming',
+      description: 'Python learn from zero to hero',
+      icon: <FaCode />,
+      path: '/courses'
+    },
+    
+   
   ];
 
   return (
